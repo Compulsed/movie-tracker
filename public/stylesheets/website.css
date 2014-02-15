@@ -1,0 +1,174 @@
+body{
+    background: #428bca;
+}
+
+/*
+    Common stylings
+*/
+
+.page-body-spanner{
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: #fff;
+    background-image: url(/images/wet_snow.png);
+
+}
+
+.my-border-background{
+    border: 1px solid #d3d3d3;
+    background: white;
+    padding: 20px;
+
+    border-radius: 3px;
+}
+
+.my-border-background-margins{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/*
+    Header CSS
+*/
+
+.navbar{
+    background:  #428bca;
+    min-height: 70px;
+    border-radius: 0px;
+
+    margin: 0px;
+}
+
+.navbar a{
+    font-size: 32px;
+    color: white;
+}
+
+/*
+    Navigational bar
+*/
+.navigational-container{
+    min-height: 30px;
+    background: #66CCFF;
+    width: 100%;
+}
+
+.navigational-row{
+
+}
+
+.navigational-row a{
+    text-decoration: none !important;
+}
+
+
+.navigational-row p{
+    font-size: 24px;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.navigational-row .selection-col:hover{
+    background: #428bca;
+}
+
+/*
+    Footer CSS
+*/
+
+footer{
+    border-top: 10px solid #66CCFF;
+
+    width: 100%;
+    background: #428bca;
+    color: white;
+}
+
+footer .row{
+    padding: 50px;
+}
+
+
+
+/*
+    Search CSS
+*/
+
+.search-row h2{
+    padding: 5px;
+    margin: 0;
+}
+
+.search-row input, .search-row select{
+    padding: 5px;
+
+    width: 100%;
+    height: 30px;
+    border: 1px solid #d3d3d3;
+}
+
+
+/*
+    Movie CSS
+*/
+
+.movie-container a{
+    margin-top: 20px;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+.movie-row{
+    margin-top: 20px;
+}
+
+.movie-col{}
+
+.movieItem:hover{
+    border: 1px solid #428bca;
+    box-shadow: 5px 5px 5px -2px #428bca;
+}
+
+/*
+    article-row
+*/
+
+.article-row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.removeDefaultA{
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+.removeDefaultA:hover{
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+/*
+    Movie
+*/
+
+.comment-row{
+
+    padding: 20px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border: 1px solid black;
+    background: rgba(185, 74, 72, .7);
+}
+
+/*
+    Other
+*/
+
+.navigational-container .glyphicon{
+    font-size:18px;
+}

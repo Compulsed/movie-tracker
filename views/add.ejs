@@ -1,0 +1,75 @@
+<% include ends/header %>
+
+<div class="page-body-spanner">
+  <div class="search-container">
+    <div class="container">
+
+      <div class="row my-border-background">
+
+        <div class="col-md-12">
+
+          <h2>
+            Add movie to database
+            <small>all fields with * must be completed</small>
+            <button id="buttonDataImport" style="float:right;" class="btn btn-primary">Attempt a Data Import</button>
+          </h2>
+
+          <p>For an import, fill in the title and year for best results.</p>
+
+          <form role="form" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="inputMovieTitle">Title*</label>
+              <input name="inputMovieTitle" type="title" class="form-control" id="inputMovieTitle" placeholder="Enter title">
+            </div>
+
+            <div class="form-group">
+              <label for="inputMovieDescription">Movie Description*</label>
+              <textarea name="inputMovieDescription" class="form-control" rows="3" id="inputMovieDescription"  placeholder="Add what you thought about the movie"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="inputMovieYear">Year*</label>
+              <input name="inputMovieYear" type="title" class="form-control" id="inputMovieYear" placeholder="The year the movie was made">
+            </div>
+
+            <div class="form-group">
+              <label for="inputMovieRating">Rating*</label>
+              <input name="inputMovieRating" type="title" class="form-control" id="inputMovieRating" placeholder="The year the movie was made">
+            </div>
+
+
+            <div class="form-group">
+              <label for="inputMovieDirector">Director*</label>
+              <input name="inputMovieDirector" type="title" class="form-control" id="inputMovieDirector" placeholder="The director of the movie">
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input name="inputMovieSeen" type="checkbox" checked> Have you already seen this?
+              </label>
+            </div>
+
+            <div class="form-group" id="uploadButtonGroup">
+              <label for="inputMoviePoster">File input*</label>
+              <input name="inputMoviePoster" type="file" id="inputMoviePoster">
+              <p class="help-block">Enter a .jpg poster image. Max size 2MB.</p>
+            </div>
+
+            <div>
+              <img style="width: 200px; margin: 20px; display:none;" id="inputMoviePosterTmp" src="/images/movie-posters/1.jpg">
+              <input style="display:none;" name="inputMoviePosterTmpField" id="inputMoviePosterTmpField">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div><!-- /end page-body-spanner -->
+
+<% include ends/footer %>

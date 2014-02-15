@@ -1,0 +1,93 @@
+<% include ends/header %>
+
+<div class="page-body-spanner">
+  <div class="search-container">
+    <div class="container">
+
+    <div class="row my-border-background">
+
+      <div class="row">
+        <div class="col-md-4">
+          <a href="/images/movie-posters/<%= movieRow.movieId %>.jpg">
+            <img src="/images/movie-posters/<%= movieRow.movieId %>.jpg" class="img-responsive" alt="Responsive image">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <h2><%= movieRow.title %></h2>
+
+          <p><strong>Description</strong>:<br> <%= movieRow.aDescription %></p>
+          <p><strong>Rating</strong>:<br> <%= movieRow.aRating %></p>
+
+          <% if(movieRow.hasSeen){ %>
+            <p><strong>Added</strong>:<br> Yes</p>
+          <% } else { %>
+            <p><strong>Added</strong>:<br> No</p>
+          <% } %>
+
+          <p><strong>Added</strong>:<br> <%= movieRow.dateAdded %></p>
+          <p><strong>Description</strong>:<br> <%= movieRow.aDescription %></p>
+          <p><strong>Year</strong>:<br> <%= movieRow.year %></p>
+          <p><strong>Director</strong>:<br> <%= movieRow.director %></p>
+        </div>
+      </div>
+      <div class="row my-border-background-margins">
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary" id="addCommentBtn">Add a comment</button>
+        </div>
+      </div>
+
+      </div>
+
+
+      <div id="commentRow" style="display:none;" class="row my-border-background my-border-background-margins">
+          <h3>Add a comment</h3>
+          <form role="form" method="POST" onsubmit="return addComment();">
+
+            <div class="form-group">
+              <label for="inputMovieComment">Thoughts and comments on the movie*</label>
+              <textarea name="inputMovieComment" class="form-control" rows="5" id="inputMovieComment"  placeholder="Add what you thought about the movie"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="inputMovieRating">Rating*</label>
+              <input name="inputMovieRating" type="title" class="form-control" id="inputMovieRating" placeholder="A rating from 0 to 10 of how good the movie was">
+            </div>
+
+            <button class="btn btn-primary" id="submitCommentBtn">Add Comment</button>
+          </form>
+      </div>
+
+
+
+      <div class="row my-border-background article-row">
+        <div class="col-md-12">
+          <h2>My Comments</h2>
+        </div>
+
+        <div id="newCommentSection"></div>
+
+      <% if(commentsRow !== null){ %>
+        <% for(var i = 0; i < commentsRow.length; ++i) { %>
+        <div class="col-md-12">
+          <div class="row comment-row">
+
+            <p>Rating:
+              <% for(var j = 0; j < parseInt(commentsRow[i].myRating); ++j) { %>
+                <span class="glyphicon glyphicon-star"></span>
+              <% } %>
+            </p>
+
+            <p><%= commentsRow[i].myComment %></p>
+          </div>
+        </div>
+        <% } %>
+      <% } %>
+
+      </div>
+
+
+    </div>
+  </div>
+</div> <!-- end page-body-spanner -->
+
+<% include ends/footer %>

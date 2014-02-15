@@ -1,0 +1,27 @@
+<% include ends/header %>
+
+<div class="page-body-spanner">
+  <div class="container">
+    <div class="row">
+      <h1>Comments Stream</h1>
+    </div>
+
+        <% for(var i = 0; i < commentsRow.length; ++i) { %>
+          <a href="/movie/<%= commentsRow[i].movieIdF %>" class="removeDefaultA">
+            <div class="row article-row my-border-background">
+              <div class="col-md-4">
+                <img src="/images/movie-posters/<%= commentsRow[i].movieIdF %>.jpg" class="img-responsive" alt="Responsive image">
+              </div>
+              <div class="col-md-8">
+                <h3><%= commentsRow[i].title %></h3>
+                <p><strong>My Rating:</strong><br> <%= commentsRow[i].myRating %></p>
+                <p><strong>My Opinion:</strong><br><%= commentsRow[i].myComment %></p>
+              </div>
+            </div>
+          </a>
+        <% } %>
+
+  </div>
+</div>
+
+<% include ends/footer %>

@@ -1,0 +1,70 @@
+<% include ends/header %>
+
+<div class="page-body-spanner">
+  <div class="search-container">
+    <div class="container">
+      <div class="row search-row my-border-background">
+
+        <div class="col-md-4">
+          <h4>Search</h4>
+        </div>
+        <div class="col-md-4">
+          <select>
+            <option>By Title</option>
+            <option>Alphabetical</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <input>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="movie-container">
+    <div class="container">
+
+        <% var endDivAdded = false; %>
+        <% for(var i = 0; i < movieRows.length; ++i){ %>
+          <% if( !(i % 4) ) { %>
+            <% endDivAdded = false; %>
+            <div class="row movie-row">
+          <% } %>
+
+            <div class="col-md-3">
+              <a href="/movie/<%= movieRows[i].movieId %>">
+                <div class="my-border-background movieItem">
+                  <h3 class="movieTitle"><%= movieRows[i].title %></h3>
+
+                  <% if(movieRows[i].hasSeen){ %>
+                    <p><strong>Seen</strong>: Yes</p>
+                  <% } else { %>
+                    <p><strong>Seen</strong>: No</p>
+                  <% } %>
+
+                  <p><strong>Description</strong>: <%= movieRows[i].aDescription %></p>
+                  <p><strong>Rating</strong>: <%= movieRows[i].aRating %></p>
+                  <p><strong>Year</strong>: <%= movieRows[i].year %></p>
+                  <p><strong>Director</strong>: <%= movieRows[i].director %></p>
+
+                  <img src="/images/movie-posters/<%= movieRows[i].movieId %>.jpg" class="img-responsive" alt="Responsive image">
+                </div>
+              </a>
+            </div>
+          </a>
+
+          <% if( !((i + 1) % 4) ){ %>
+            <% endDivAdded = true; %>
+            </div><!-- /end movie-row -->
+          <% } %>
+        <% } %>
+        <% if(!endDivAdded){ %>
+          </div><!-- /end movie-row -->
+        <% } %>
+
+    </div>
+  </div><!-- /end movie-container -->
+</div><!-- /end body page spanner -->
+
+<% include ends/footer %>
