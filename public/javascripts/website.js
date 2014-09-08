@@ -7,6 +7,8 @@ function addComment(){
     var myRating = parseFloat($('#inputMovieRating').val());
     var myComment = $('#inputMovieComment').val();
 
+    myComment = myComment.replace(/<(?:.|\n)*?>/gm, '');
+
     console.log(myRating);
     console.log(myComment);
 
@@ -79,7 +81,7 @@ $(document).ready(function(){
 
                 inputMovieDescription.val(JSON['Plot']);
                 inputMovieDirector.val(JSON['Director']);
-                inputMovieYear.val(JSON['Year']);
+                inputMovieYear.val(parseInt(JSON['Year']));
                 inputMovieTitle.val(JSON['Title']);
                 inputMovieRating.val(JSON['imdbRating']);
 

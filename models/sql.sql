@@ -26,7 +26,7 @@ CREATE TABLE tblMovies(
   aDescription      varchar(255)  NOT NULL,
   year              int(11)       NOT NULL,
   director          varchar(255)  NOT NULL,
-  aRating           float(2,1)    NOT NULL,
+  aRating           float(3,1)    NOT NULL,
 
   -- Scrapped values
 
@@ -47,7 +47,7 @@ CREATE TABLE tblComments(
   active            tinyint(1)    NOT NULL DEFAULT 0,
 
   -- Required
-  myRating          smallint      NOT NULL,     -- Out of 10
+  myRating          float(3,1)      NOT NULL,     -- Out of 10
   myComment         varchar(255)  NOT NULL,
 
   -- Automatically handled
@@ -78,11 +78,6 @@ INSERT INTO tblMovies(title, aDescription, year, director, aRating, hasSeen) VAL
 INSERT INTO tblMovies(title, aDescription, year, director, aRating, hasSeen) VALUES("Avatar", "Dude saves planet", 2009, "James Cameron", 7.8, 0);
 
 -- -- Adding test comment data
-INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(1, "Was a great all time classic, I love BATMAN!1", 9);
-INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(1, "Was a great all time classic, I love BATMAN!2", 9);
-INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(1, "Was a great all time classic, I love BATMAN!3", 9);
-INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(1, "Was a great all time classic, I love BATMAN!4", 9);
-
-
+INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(1, "Was a great all time classic, I love BATMAN!", 9);
 INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(2, "After watching this again, it wasn't as good", 7);
 

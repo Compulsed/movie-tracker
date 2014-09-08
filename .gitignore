@@ -1,7 +1,0 @@
-node_modules
-public/images/movie-posters
-public/images/tmp-uploads
-
-modules/db-config.js
-
-.DS_Store

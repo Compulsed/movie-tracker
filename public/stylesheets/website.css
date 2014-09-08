@@ -28,6 +28,10 @@ body{
 }
 
 
+.page-body{
+    background: white;
+}
+
 /*
     Header CSS
 */

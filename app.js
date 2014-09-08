@@ -8,7 +8,6 @@
         - The uploaded file should stop after 2MB has been processed
         - There should be a check to make sure the file is actually a JPEG or allow PNG support
         - Clearning up the upload directory
-        - A footer could be added
 
     Implemented Improvements
         - The import function should also get and save the poster from IMDB
@@ -21,7 +20,8 @@
         -
 
     Fixes
-        -
+        - Fixed a floating point bug with the MSQL syntax from Float(2, 1) to Float(3, 1)
+            3 figues, 2 for the integer and 1 for the decimal point
 */
 
 /**
@@ -71,6 +71,15 @@ app.use(app.router);
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+
+app.all('*', function(req, res, next){
+
+    var connection = req['_remoteAddress'];
+
+    console.log(req['_remoteAddress']);
+
+    next();
+});
 
 app.get('/', routes.index(db));
 app.get('/search', routes.search(db));
