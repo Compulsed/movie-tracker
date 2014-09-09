@@ -1,9 +1,5 @@
 # About
-This application allows you to:
- 
-* Save movies you have seen and then write comments on them
-* Import meta data from IMDB
-* View all the movies you have watched
+This application allows you to 
 
 # Requirements
 * MySQL 
