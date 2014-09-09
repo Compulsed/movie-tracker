@@ -1,5 +1,10 @@
 # About
-This application allows you to 
+This application allows you to store information about
+movies you have seen and allows your to write comments 
+on them if you have rewatched them at a later date
+
+# TODO
+- As of yet is is no form of input validation /checking an error is just thrown 
 
 # Requirements
 * MySQL 
