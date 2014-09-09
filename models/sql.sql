@@ -74,10 +74,10 @@ CREATE VIEW vmCommentsWithMovieTitle AS
 
 
 -- Adding test data to tblMovies
-INSERT INTO tblMovies(title, aDescription, year, director, aRating, hasSeen) VALUES("The Dark Knight", "Batman kills joker.", 2008, "Christopher Nolan", 9.0 ,1);
-INSERT INTO tblMovies(title, aDescription, year, director, aRating, hasSeen) VALUES("Avatar", "Dude saves planet", 2009, "James Cameron", 7.8, 0);
+-- INSERT INTO tblMovies(title, aDescription, year, director, aRating, hasSeen) VALUES("The Dark Knight", "Batman kills joker.", 2008, "Christopher Nolan", 9.0 ,1);
+-- INSERT INTO tblMovies(title, aDescription, year, director, aRating, hasSeen) VALUES("Avatar", "Dude saves planet", 2009, "James Cameron", 7.8, 0);
 
 -- -- Adding test comment data
-INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(1, "Was a great all time classic, I love BATMAN!", 9);
-INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(2, "After watching this again, it wasn't as good", 7);
+-- INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(1, "Was a great all time classic, I love BATMAN!", 9);
+-- INSERT INTO tblComments(movieIdF, myComment, myRating) VALUES(2, "After watching this again, it wasn't as good", 7);
 
